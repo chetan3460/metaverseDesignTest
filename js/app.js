@@ -1,10 +1,9 @@
 // Include images
 let img_src = [
-  'assets/images/3.webp',
-  'assets/images/2.webp',
-  'assets/images/3.webp',
-  'assets/images/test.webp',
-  'assets/images/2.webp',
+  '/images/home/3.webp',
+  '/images/home/2.webp',
+  '/images/home/3.webp',
+  '/images/home/2.webp',
 
 ];
 
