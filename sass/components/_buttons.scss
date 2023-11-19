@@ -1,0 +1,45 @@
+// ==========================================================================
+//  Site Button Component
+//  ==========================================================================
+
+.btn {
+    padding: 10px 30px;
+    @include font-rem(14px, 17px);
+    font-family: $baseFontFamily;
+    border-width: 0 !important;
+    text-transform: capitalize;
+
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 500;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    color: #fff;
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        color: #fff;
+    }
+
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+
+    &:active {
+        color: #fff !important;
+    }
+
+    &.btn-register {
+        background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+        box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+    }
+}

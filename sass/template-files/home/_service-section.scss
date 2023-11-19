@@ -1,0 +1,89 @@
+section.service-section {
+    background: #0a0d14;
+    padding: 70px 0;
+    // z-index: 1;    
+    position: relative;
+
+    @include bp(tablet-sm) {
+        padding: 45px 0 20px;
+        text-align: center;
+    }
+
+    .service-item {
+        z-index: 1;
+        position: relative;
+
+        @include bp(tablet-sm) {
+            margin-bottom: 30px;
+        }
+
+        .service-icon {
+            position: relative;
+            margin-bottom: 20px;
+            display: inline-block;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+            transition: all .2s ease-in-out;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                top: 0;
+                right: -10px;
+                z-index: -1;
+                background: rgba(11, 175, 167, 0.1803921569);
+                border-radius: 50%;
+                box-shadow: 0px 0px 5px 6px rgba(11, 175, 167, 0.1803921569);
+                transition: all 0.3s linear;
+
+            }
+
+            i {
+                font-size: 45px;
+                background-image: linear-gradient(to top right, #065fbb, #44cfc8);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                position: relative;
+                z-index: 1;
+            }
+
+        }
+
+        p {
+            @include font-rem(17px, 20px);
+            font-weight: 600;
+            color: color(primary, white);
+        }
+
+        &:hover {
+            .service-icon {
+                animation-name: bounce;
+                animation-timing-function: ease;
+
+                &::before {}
+            }
+
+        }
+
+        &:hover {}
+
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

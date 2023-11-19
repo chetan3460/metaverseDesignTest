@@ -1,0 +1,335 @@
+// Helper classes
+
+//Title shadow
+
+.text-shadow-white {
+    text-shadow:
+        -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
+}
+
+.text-shadow-black {
+    text-shadow:
+        -1px -1px 0 #333333,
+        1px -1px 0 #333333,
+        -1px 1px 0 #333333,
+        1px 1px 0 #333333;
+}
+
+// Primary/Secondary classes
+
+.text-primary {
+    color: color(primary, base) !important;
+}
+
+.text-secondary {
+    color: color(secondary, base) !important;
+}
+
+.color-white {
+    color: color(#fff);
+}
+
+.text-theme {
+    color: color(theme-light);
+}
+
+.text-danger {
+    color: color(danger) !important;
+}
+
+// Shades of grey
+
+.secondary-font {
+    font-family: $baseFontFamily;
+}
+
+.sub-font {
+    font-family: $baseFontFamily;
+}
+
+// Text decoration/none
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.underline-none {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.radius {
+    border-radius: 5px !important;
+}
+
+// box-shadow gradient
+
+.box-shadow {
+    &-primary {
+        box-shadow: 0 3px 39px rgba(0, 0, 0, 0.06);
+    }
+
+    &-secondary {
+        box-shadow: 0 3px 39px rgba(0, 0, 0, 0.13);
+    }
+}
+
+// Font weight classes
+
+.font-weight {
+    &-light {
+        font-weight: 300 !important;
+    }
+
+    &-regular {
+        font-weight: 400 !important;
+    }
+
+    &-medium {
+        font-weight: 500 !important;
+    }
+
+    &-semi-bold {
+        font-weight: 600 !important;
+    }
+
+    &-bold {
+        font-weight: 700 !important;
+    }
+}
+
+.min-height {
+    min-height: 100vh;
+}
+
+.no-border {
+    border: 0 !important;
+}
+
+// Global helper classes
+
+// Pointer cursor
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+// Overflow class
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.text-underline {
+    text-decoration: underline !important;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.picture-fit {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    font-family: "object-fit: cover; object-position: center;";
+}
+
+.desktop-only {
+    @include bp(tablet-sm) {
+        display: none;
+    }
+}
+
+.tablet-only {
+    display: none;
+
+    @include bp(tablet-sm) {
+        display: block;
+    }
+}
+
+.small-text {
+    @include font-rem(12px, 15px);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 4px;
+
+    .subtitle {
+        text-align: right;
+
+        i {
+            font-size: 25px;
+            background: #FDC830;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #F37335, #FDC830);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #F37335, #FDC830);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            z-index: 1;
+
+        }
+
+        p {
+            font-size: 25px;
+            font-weight: 700;
+            // background-image: linear-gradient(to right, #eda668, rgba(238, 34, 129, 0.7803921569), #3a2ece);
+            background: linear-gradient(141deg, #eda668, #ee2281, #3a2ece);
+            background-size: 600% 600%;
+
+            -webkit-animation: textColor 6s ease infinite;
+            -moz-animation: textColor 6s ease infinite;
+            animation: textColor 6s ease infinite;
+
+
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    h3 {
+        font-size: 60px;
+        font-weight: 700;
+        color: color(primary, white);
+    }
+}
+
+/* FlexBox Css */
+.d-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.align-left {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.align-right {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.align-center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.align-justify {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.align-spaced {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.align-top {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.align-self-top {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.align-bottom {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.align-self-bottom {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+.align-middle {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.align-self-middle {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.align-stretch {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+}
+
+.align-self-stretch {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+}
+
+.align-center-middle {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+
+.row-reverse {
+    -webkit-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+}
